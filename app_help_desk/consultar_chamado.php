@@ -1,3 +1,9 @@
+<?php
+require_once "validador_acesso.php";
+//require
+//include
+//include_once
+?>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -54,7 +60,10 @@
 
               <div class="row mt-5">
                 <div class="col-6">
+                  <a href="home.php">
                   <button class="btn btn-lg btn-warning btn-block" type="submit">Voltar</button>
+                  </a>
+                  </a>
                 </div>
               </div>
             </div>
