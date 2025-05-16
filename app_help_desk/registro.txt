@@ -2,3 +2,4 @@
 1|adm|John|Teste de Salvar|Impressora|Impressora ruim
 1|adm|John|Teste de Salvar|Impressora|Impressora ruim
 1|adm|John|Ajuda|Rede|internet ruim
+1|adm|John|Teste novo de chamado adm|Impressora|Teste impressora ruim

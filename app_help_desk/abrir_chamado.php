@@ -66,8 +66,7 @@ require_once "validador_acesso.php";
                     <div class="row mt-5">
                       <div class="col-6">
                        
-                       <a class="btn btn-lg btn-warning btn-block" href="home.php">Voltar</button>
-                        </a>
+                       <a class="btn btn-lg btn-warning btn-block" href="home.php">Voltar</a>
                       </div>
 
                       <div class="col-6">
