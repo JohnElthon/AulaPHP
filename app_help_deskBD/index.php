@@ -42,6 +42,9 @@
                 <div class="form-group">
                   <input type="password" name="senha" class="form-control" placeholder="Senha">
                 </div>
+                  <div class="text-primary" style="text-align: right;"> 
+                  <a href="cadastro.php">Novo? Cadastre-se!</a>
+                </div>
 
 
                 
