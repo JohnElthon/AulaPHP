@@ -1,29 +1,23 @@
 <?php
 require_once "validador_acesso.php";
+require 'config.php';
 
-//Organizando os dados, retirando | dos possiveis valores
-$id = str_replace('|','-',$_SESSION['id']);
-$perfil = str_replace('|','-',$_SESSION['perfil']);
-$nome = str_replace('|','-',$_SESSION['nome']);
-$titulo = str_replace('|','-',$_POST['titulo']);
-$categoria = str_replace('|','-',$_POST['categoria']);
-$descricao = str_replace('|','-',$_POST['descricao']);
+$titulo = $_POST['titulo'];
+$categoria = $_POST['categoria'];
+$descricao = $_POST['descricao'];
+$id_usuario = $_SESSION['id'];
+$statuschamado = 'Aberto';
 
-//concatenando os valores decada parâmetro, separado por |
-$dados = $id . '|' . $perfil . '|' . $nome . '|' . $titulo . '|' . $categoria . '|' . $descricao . PHP_EOL;
 
-//var_dump($dados);
+//Inserindo no banco
+$sql = "INSERT INTO chamados(titulo, categoria, descricao, id_usuario, statuschamado) VALUES ('{$titulo}','{$categoria}','{$descricao}','{$id_usuario}','{$statuschamado}')";
 
-//Abrindo o arquivo e armazenando em uma variavel
-$arquivo = fopen('..\app_help_desk\Registro.txt','a');
+ $res = $conexao->query($sql);
 
-//Escrevendo no arquivo
-fwrite($arquivo, $dados);
+if ($res == true){
+    header('location: abrir_chamado.php?cadastro=efetuado');
+}else{
+    header('location: abrir_chamado.php?cadastro=falha');
+}
 
-//Fechando o arquivo
-fclose($arquivo);
-
-// Redirecionando para a página de abertura de chamado
-header('location: abrir_chamado.php?cadastro=sucesso');
- 
 ?>

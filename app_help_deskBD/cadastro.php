@@ -48,26 +48,26 @@ require_once "validador_acesso.php";
                             <h4>Cadastro de Usuário</h4>
                         </div>
                         <div class="card-body">
-                            <form>
+                            <form action="valida_cadastro.php" method="POST">
                                 <div class="form-group">
-                                    <label>Nome</label>
-                                    <input type="text" class="form-control">
+                                    <label>Nome Completo</label>
+                                    <input name="nome" type="text" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label>E-mail</label>
-                                    <input type="email" class="form-control">
+                                    <input name="email" type="email" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label>Senha</label>
-                                    <input type="password" class="form-control">
+                                    <input name="senha" type="password" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label>Tipo de Usuário</label>
-                                    <select class="form-control">
-                                        option selected disabled>Selecione</option>
-                                        <option value="admin">Administrador</option>
-                                        <option value="tecnico">Técnico</option>
-                                        <option value="usuario">Usuário</option>
+                                    <select name= "perfil" class="form-control">
+                                        <option selected disabled>Selecione</option>
+                                        <option>Administrador</option>
+                                        <option>Técnico</option>
+                                        <option>Usuário</option>
                                     </select>
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
