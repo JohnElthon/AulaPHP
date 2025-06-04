@@ -52,7 +52,7 @@ $row = $res->fetch_object();
               <div class="col-2 d-flex justify-content-center">
                 <a href="abrir_chamado.php">
                   <img src="../app_help_deskbd/imagens/abrir_chamado.png" width="70" height="70">
-                  <p>&nbsp&nbsp&nbsp&nbspAbrir</p>
+                  <p>Abrir</p>
                 </a>
  
               </div>
@@ -65,9 +65,9 @@ $row = $res->fetch_object();
  
               <?php if ($row->perfil != 'Adm' && $row->perfil != 'Tec') { ?>
                 <div class="col-2 d-flex justify-content-center">
-                  <a href="#" style="filter: grayscale(100%); opacity: 0.5;">
+                  <a href="editar_chamado.php" style="filter: grayscale(100%); opacity: 0.5;">
                     <img src="APP_HELP_DESKBD/imagens/editar01.png" width="70" height="70">
-                    <p>&nbspEditar</p>
+                    <p>pEditar</p>
                   </a>
                 </div>
  
@@ -81,7 +81,7 @@ $row = $res->fetch_object();
               <div class="col-2 d-flex justify-content-center">
                 <a href="#" style="filter: grayscale(100%); opacity: 0.5;">
                   <img src="../app_helpdeskbd/imagens/usuarios.png" width="70" height="70">
-                  <p>&nbspUsuários</p>
+                  <p>Usuários</p>
                 </a>
               </div>
  
@@ -96,7 +96,7 @@ $row = $res->fetch_object();
                 <div class="col-2 d-flex justify-content-center">
                   <a href="editar_chamado.php">
                     <img src="../app_help_deskbd/imagens/editar-arquivo.png" width="70" height="70">
-                    <p>&nbspEditar</p>
+                    <p>Editar</p>
                   </a>
                 </div>
  
@@ -110,7 +110,7 @@ $row = $res->fetch_object();
               <div class="col-2 d-flex justify-content-center">
                 <a href="#" style="filter: grayscale(100%); opacity: 0.5;">
                   <img src="../app_help_deskbd/imagens/usuarios.png" width="70" height="70">
-                  <p>&nbspUsuários</p>
+                  <p>Usuários</p>
                 </a>
               </div>
  
@@ -125,7 +125,7 @@ $row = $res->fetch_object();
                 <div class="col-2 d-flex justify-content-center">
                   <a href="editar_chamado.php">
                     <img src="../app_help_deskbd/imagens/editar01.png" width="70" height="70">
-                    <p>&nbspEditar</p>
+                    <p>Editar</p>
                   </a>
                 </div>
  
@@ -139,7 +139,7 @@ $row = $res->fetch_object();
               <div class="col-2 d-flex justify-content-center">
                 <a href="usuarios.php">
                   <img src="../app_help_deskbd/imagens/Usuarios01.png" width="70" height="70">
-                  <p>&nbspUsuários</p>
+                  <p>Usuários</p>
                 </a>
               </div>
  

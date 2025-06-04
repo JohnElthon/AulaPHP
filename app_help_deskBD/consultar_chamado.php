@@ -1,30 +1,30 @@
 <?php
 require_once "validador_acesso.php";
 require "config.php";
-
+ 
 if ($_SESSION['perfil'] != 'Adm' && 'Tecnico'){
   $sql = "SELECT * FROM chamados WHERE id_usuarios = {$_SESSION['id']}";
-} else {
+}
+ 
+else {
   $sql = "SELECT * FROM chamados";
 }
-
+ 
 $res = $conexao->query($sql);
-$qtd = $res->num_rows;
-
+$quantidade = $res->num_rows;
+ 
 $sql = "SELECT * FROM usuarios";
 $resusuarios = $conexao->query($sql);
-$qntusuarios = $resusuarios->num_rows;
-
+$QTDusuarios = $resusuarios ->num_rows;
 ?>
-
-
+ 
 <html>
   <head>
     <meta charset="utf-8" />
     <title>App Help Desk</title>
-
+ 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+ 
     <style>
       .card-consultar-chamado {
         padding: 30px 0 0 0;
@@ -33,56 +33,66 @@ $qntusuarios = $resusuarios->num_rows;
       }
     </style>
   </head>
-
+ 
   <body>
-
+ 
     <nav class="navbar navbar-dark bg-dark">
       <a class="navbar-brand" href="#">
-        <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        <img src="../app_help_deskbd/imagens/consultar01.png" width="30" height="30">
         App Help Desk
       </a>
     </nav>
-
+ 
     <div class="container">    
       <div class="row">
-
+ 
         <div class="card-consultar-chamado">
           <div class="card">
-            <div class="card-header">
+            <div class="card-header font-weight-bold">
               Consulta de chamado
             </div>
-            
+           
             <div class="card-body">
-
-              <!-- Rodamos um while passando por todos os chamados -->
-            <?php while($row = $res->fetch_object())  {?>          
-          
-              <div class="card mb-3 bg-light">
+ 
+               <?php while($row = $res->fetch_object()){ ?>
+ 
+                 <div class="card mb-3 bg-light">
                 <div class="card-body">
-
-                <!-- Nos 3 itens abaixo aplicamos os valores respectivos em cada um deles -->
-                  <h5 class="card-title"><?php echo $row -> titulo?></h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Categoria: <?php echo $row -> categoria ?></h6>
+ 
+                  <!-- Nos 3 itens abaixo aplicamos os valores respectivos em cada um deles -->
+                  <h5 class="card-title" style="color: #17A2B8; margin-bottom: 2px;"><?php echo $row -> titulo ?></h5>
+                  <h6 class="card-subtitle mb-2 text-dark "  style="margin-bottom: 10px; font-weight: bold; font-size: 25px;" > Categoria: <?php echo $row -> categoria ?></h6>
                   <p class="card-text">Descrição: <?php echo $row -> descricao ?></p>
                   <h6 class="card-subtitle mb-2 text-muted" style="text-align: right;">
-                    <?php
+               
+                 <?php
                     $idchamado = $row -> id_chamado;
                     $idusuario = $row -> id_usuario;
-                    $resusuarios->data_seek(0); 
-                    while ($user = $resusuarios->fetch_object(){
-                      if ($user -> id_usuario == $idusuario)
-                    }) 
-
-                
+                    $resusuarios->data_seek(0); // Reinicia o ponteiro do resultado da consulta de usuários
+                    while ($user = $resusuarios->fetch_object()){
+                        if ($user -> id_usuario == $idusuario){
+                          echo '<p style="color: green; margin-bottom: 2px;"> Usuário: ' . $user -> nome . '</p>';
+                            break; // Sair do loop após encontrar o usuário
+                        }
+                      }
+                    ?>
+                  </h6>
+               
+               <h6 class="card-title" style="text-align: right;">Ordem de Serviço: <?php echo $row -> id_chamado ?></h6>
+                </div>
               </div>
-
-              
-
+              <?php } ?>
+           
+ 
+                </div>
+              </div>
+ 
+               
+ 
               <div class="row mt-5">
                 <div class="col-6">
                   <a href="home.php">
-                 <a class="btn btn-lg btn-warning btn-block" href="home.php">Voltar</a>
-                  </a>
+                  <button class="btn btn-lg btn-warning btn-block"  link ="home.php">Voltar</button>
                   </a>
                 </div>
               </div>
