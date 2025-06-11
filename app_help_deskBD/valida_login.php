@@ -19,6 +19,9 @@ $row = $res->fetch_object();
         $usuarioAutenticado = true;
         $_SESSION['id'] = $row-> id_usuario;
         $_SESSION['perfil'] = $row->perfil;
+
+
+        
         $_SESSION['nome'] = $row->nome;
     } else {
         $usuarioAutenticado = false;

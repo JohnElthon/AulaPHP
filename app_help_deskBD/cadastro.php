@@ -63,12 +63,32 @@ require_once "validador_acesso.php";
                                 </div>
                                 <div class="form-group">
                                     <label>Tipo de Usuário</label>
-                                    <select name= "perfil" class="form-control">
+                                    <select name="perfil" class="form-control">
                                         <option selected disabled>Selecione</option>
                                         <option>Administrador</option>
                                         <option>Técnico</option>
                                         <option>Usuário</option>
                                     </select>
+                                    <?php //VALIDA SE O USUÁRIO JÁ NÃO ESTAVA CADASTRADO
+                                    if (isset($_GET['email']) && $_GET['email'] === 'erro') { ?>
+                                        <div class="text-danger" style="text-align: center;"> E-Mail já cadastrado!</div>
+                                    <?php } ?>
+
+                                    <?php //VALIDA SE O PERFIL É VALIDO
+                                    if (isset($_GET['validaperfil']) && $_GET['validaperfil'] === 'erro') { ?>
+                                        <div class="text-danger" style="text-align: center;"> Obrigatório selecionar um perfil!</div>
+                                    <?php } ?>
+
+                                    <?php //VALIDA SE O PERFIL É VALIDO
+                                    if (isset($_GET['usuario']) && $_GET['usuario'] === 'sucesso') { ?>
+                                        <script>
+                                            alert('Usuário cadastrado com Sucesso!');
+                                        </script>
+                                    <?php } else if (isset($_GET['usuario']) && $_GET['usuario'] != 'sucesso') { ?>
+                                        <script>
+                                            alert('Erro ao inserir usuário no banco, contate o administador!');
+                                        </script>
+                                    <?php } ?>
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
                             </form>
