@@ -51,7 +51,7 @@ if ($res) {
 
   <nav class="navbar navbar-dark bg-dark">
     <a class="navbar-brand" href="home.php">
-      <img src="../app_help_desk_bd/imagens/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      <img src="../app_help_deskbd/imagens/formularios.png" width="30" height="30" class="d-inline-block align-top" alt="">
       App Help Desk
     </a>
     <ul class="navbar-nav">
@@ -74,7 +74,7 @@ if ($res) {
             <div class="row">
               <div class="col-4 d-flex justify-content-center">
                 <a href="abertos.php" class="text-danger">
-                  <img src="../app_help_desk_bd/imagens/abertos.png" width="70" height="70">
+                  <img src="../app_help_deskbd/imagens/abertos.PNG" width="70" height="70">
                   <p>Abertos(<?php 
                       print($totalAbertos);
                   ?>)</p>
@@ -83,7 +83,7 @@ if ($res) {
 
               <div class="col-4 d-flex justify-content-center">
                 <a href="andamento.php" style="color:darkorange">
-                  <img src="../app_help_desk_bd/imagens/andamento.png" width="70" height="70">
+                  <img src="../app_help_deskbd/imagens/Processamento01.PNG" width="70" height="70">
                   <p>Andamento(<?php 
                       print($totalAndamento);
                   ?>)</p>
@@ -92,7 +92,7 @@ if ($res) {
 
               <div class="col-4 d-flex justify-content-center">
                 <a href="finalizado.php" style="color:teal">
-                  <img src="../app_help_desk_bd/imagens/finalizados.png" width="70" height="70">
+                  <img src="../app_help_deskbd/imagens/Finalizados02.PNG" width="70" height="70">
                   <p>Finalizados(<?php 
                       print($totalFinalizados);
                   ?>)</p>

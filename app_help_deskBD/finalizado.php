@@ -18,7 +18,7 @@
       padding: 5px;
       min-width: auto;
     }
-    .thead-light th { 
+    .thead-light th {
       background-color: #ffffff;
       font-weight: bold;
       text-align: center;
@@ -26,8 +26,8 @@
     td, th {
       text-align: center;
     }
-    .status-aberto {
-      background-color: #ff0000; /* Fundo vermelho */
+    .status-finalizado {
+      background-color: #28a745; /* Fundo verde */
       color: #ffffff; /* Texto branco */
       font-weight: bold;
       width: 200px; /* Aumenta o espaço da coluna */
@@ -59,12 +59,12 @@
   <div class="container">
     <br>
     <?php
-        $sql = "SELECT count(statuschamado) as 'Total' FROM chamados WHERE statuschamado ='Aberto'";
+        $sql = "SELECT count(statuschamado) as 'Total' FROM chamados WHERE statuschamado ='Finalizado'";
         $res = $conexao->query($sql);
         $row = $res->fetch_assoc(); 
         $total = $row['Total'];
 
-        $sql = "SELECT * FROM chamados WHERE statuschamado ='Aberto'";
+        $sql = "SELECT * FROM chamados WHERE statuschamado ='Finalizado'";
         $res = $conexao->query($sql);
         $qtd = $res->num_rows;
 
@@ -77,7 +77,7 @@
             print "<table class='table table-hover table-bordered table-sm'>";
             print "<thead class='thead-light'>";
             print "<tr>";
-            print "<th class='status-aberto'> Status Aberto </th>";
+            print "<th class='status-finalizado'> Status Finalizado </th>";
             print "<th colspan=4 class='total-chamados' style='text-align: left;'> $total Chamados</th>";
             print "</tr>";
             print "<tr>";

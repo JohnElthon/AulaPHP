@@ -49,7 +49,7 @@
 
   <nav class="navbar navbar-dark bg-dark">
     <a class="navbar-brand" href="home.php">
-      <img src="../app_help_deskBD/imagens/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      <img src="../app_help_deskbd/imagens/editar01.png" width="30" height="30" class="d-inline-block align-top" alt="">
       App Help Desk
     </a>
     <ul class="navbar-nav">
@@ -58,18 +58,18 @@
       </li>
     </ul>
   </nav>
-         
-  <?php //valida se o chamado foi deletado
-    if(isset($_GET['delete']) && $_GET['delete'] === 'sucesso') { ?>
-        <script> alert('Chamado Excluído!');</script>
-    <?php } ?>
 
-      <?php //valida se o chamado foi editado
-    if(isset($_GET['edicao']) && $_GET['edicao'] === 'sucesso') { ?>
-        <script> alert('Chamado Editado!');</script>
-    <?php } ?>
+    <?php //VALIDA SE O CHAMADO FOI DELETADO
+        if(isset($_GET['delete']) && $_GET['delete'] === 'sucesso') { ?>
+            <script> alert('Chamado excluído!');</script>
+        <?php } ?>    
+        
+        <?php //VALIDA SE O CHAMADO FOI EDITADO
+        if(isset($_GET['edicao']) && $_GET['edicao'] === 'sucesso') { ?>
+            <script> alert('Chamado Editado!');</script>
+        <?php } ?>
 
-     <div class="container">
+    <div class="container">
         <br>
         <?php
             $sql = "SELECT * FROM chamados";
@@ -80,13 +80,13 @@
             $resusuarios = $conexao->query($sql);
             $qtdusuarios = $resusuarios->num_rows;
 
-         if($qtd > 0){
-                print "<div class='table-responsive' >";
-                print "<table class='table table-bordered table-sm table-dark'>";
-                print "<thead class='thead-dark table-sm'>"; // Alterei a cor do cabeçalho da tabela para branco
+            if($qtd > 0){
+                print "<div class='table-responsive'>";
+                print "<table class='table table-primary table-bordered table-sm'>";
+                print "<thead class='thead-dark'>"; // Alterei a cor do cabeçalho da tabela para branco
                 print "<tr>";
                 print "<th scope='col'>Chamado</th>";
-                print "<th scope='col' class='hide-on-very-small'>Título</th>";
+                print "<th scope='col' class='hide-on-very-small'  >Título</th>";
                 print "<th scope='col' class='hide-on-small'>Categoria</th>";
                 print "<th scope='col' class='hide-on-small'>Descrição do Usuário</th>";
                 print "<th scope='col' class='hide-on-small'>Descrição do Técnico</th>";
@@ -107,18 +107,16 @@
                     print "<td class='hide-on-small'>" . $row -> descricao . "</td>";
                     print "<td class='hide-on-small'>" . $row -> descricaotecnico . "</td>";
                     print "<td class='hide-on-small'>" . $row -> statuschamado . "</td>";                    
-                    print "<td class='hide-on-small'>" . $row -> valor . "</td>"; 
-
+                    print "<td class='hide-on-small'>" . $row -> valor . "</td>";                    
 
                     $idchamado = $row -> id_chamado;
                     $idusuario = $row -> id_usuario;
-                    $resusuarios->data_seek(0); //reinicia o ponteiro do resultado da consulta
-                    while ($user = $resusuarios->fetch_object()) {
-                        if($user -> id_usuario == $idusuario){
+                    $resusuarios->data_seek(0); // Reinicia o ponteiro do resultado da consulta de usuários
+                    while ($user = $resusuarios->fetch_object()){
+                        if ($user -> id_usuario == $idusuario){
                             print "<td class='hide-on-small'>" . $user -> nome . "</td>";
-                            break; // adicionado para sair do loop apos encontrar o user
-
-                     }
+                            break; // Adicionado para sair do loop após encontrar o usuário
+                        }
                     }
                     
                     print "<td>
@@ -146,5 +144,3 @@
 </body>
 
 </html>
-
-

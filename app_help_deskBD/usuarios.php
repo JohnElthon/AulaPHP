@@ -44,7 +44,7 @@
 
   <nav class="navbar navbar-dark bg-dark">
     <a class="navbar-brand" href="home.php">
-      <img src="../app_help_desk_bd/imagens/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      <img src="../app_help_deskbd/imagens/Usuarios01.png" width="30" height="30" class="d-inline-block align-top" alt="">
       App Help Desk
     </a>
     <ul class="navbar-nav">
@@ -74,8 +74,8 @@
 
             if($qtd > 0){
                 print "<div class='table-responsive'>";
-                print "<table class='table table-hover table-bordered table-sm'>";
-                print "<thead class='thead-light'>"; // Cabeçalho branco com texto em negrito
+                print "<table class='table table-primary table-bordered table-sm'>";
+                print "<thead class='thead-dark'>"; // Cabeçalho branco com texto em negrito
                 print "<tr>";
                 print "<th scope='col'>ID</th>";
                 print "<th scope='col'>Usuário</th>";

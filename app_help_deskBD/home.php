@@ -22,6 +22,8 @@ $row = $res->fetch_object();
       width: 100%;
       margin: 0 auto;
     }
+
+    
   </style>
 </head>
 
@@ -39,7 +41,7 @@ $row = $res->fetch_object();
     </ul>
   </nav>
 
-  <div class="container">
+  <div class="container" >
     <div class="row">
 
       <div class="card-home">
@@ -52,7 +54,7 @@ $row = $res->fetch_object();
               <div class="col-2 d-flex justify-content-center">
                 <a href="abrir_chamado.php">
                   <img src="../app_help_deskbd/imagens/abrir_chamado.png" width="70" height="70">
-                  <p>&nbsp&nbsp&nbsp&nbspAbrir</p>
+                  <p>Abrir</p>
                 </a>
 
               </div>
@@ -67,7 +69,7 @@ $row = $res->fetch_object();
                 <div class="col-2 d-flex justify-content-center">
                   <a href="editar_chamado.php">
                     <img src="APP_HELP_DESKBD/imagens/editar01.png" width="70" height="70">
-                    <p>&nbspEditar</p>
+                    <p>Editar</p>
                   </a>
                 </div>
 
@@ -81,7 +83,7 @@ $row = $res->fetch_object();
               <div class="col-2 d-flex justify-content-center">
                 <a href="#" style="filter: grayscale(100%); opacity: 0.5;">
                   <img src="../app_help_deskbd/imagens/Empresa01.png" width="70" height="70">
-                  <p>&nbspUsuários</p>
+                  <p>Usuários</p>
                 </a>
               </div>
 
@@ -96,7 +98,7 @@ $row = $res->fetch_object();
                 <div class="col-2 d-flex justify-content-center">
                   <a href="editar_chamado.php">
                     <img src="../app_help_deskbd/imagens/editar-arquivo.png" width="70" height="70">
-                    <p>&nbspEditar</p>
+                    <p>Editar</p>
                   </a>
                 </div>
 
@@ -110,7 +112,7 @@ $row = $res->fetch_object();
               <div class="col-2 d-flex justify-content-center">
                 <a href="#" style="filter: grayscale(100%); opacity: 0.5;">
                   <img src="../app_help_deskbd/imagens/usuarios.png" width="70" height="70">
-                  <p>&nbspUsuários</p>
+                  <p>Usuários</p>
                 </a>
               </div>
 
@@ -125,7 +127,7 @@ $row = $res->fetch_object();
                 <div class="col-2 d-flex justify-content-center">
                   <a href="editar_chamado.php">
                     <img src="../app_help_deskbd/imagens/editar01.png" width="70" height="70">
-                    <p>&nbspEditar</p>
+                    <p>Editar</p>
                   </a>
                 </div>
 
@@ -139,7 +141,7 @@ $row = $res->fetch_object();
               <div class="col-2 d-flex justify-content-center">
                 <a href="usuarios.php">
                   <img src="../app_help_deskbd/imagens/Usuarios01.png" width="70" height="70">
-                  <p>&nbspUsuários</p>
+                  <p>Usuários</p>
                 </a>
               </div>
 
@@ -157,7 +159,7 @@ $row = $res->fetch_object();
 
         <div class="card-home">
           <div class="card">
-            <img src="imagens/Empresa01.png" alt="Banner" height="390px" width="600px" alignItens="center">
+            <img src="imagens/Empresa02.png" alt="Banner" height="465px" >
             <h6 style="text-align: center;">App Help Desk</h6>
             <p style="text-align: center;">Assistência de qualidade para sua empresa!</p>
           </div>

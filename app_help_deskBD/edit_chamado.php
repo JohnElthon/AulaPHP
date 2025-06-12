@@ -3,12 +3,14 @@ require_once "validador_acesso.php";
 require_once "config.php";
 
 $sql = "SELECT * FROM chamados WHERE id_chamado = {$_GET['id']}";
-$res = $conexao ->query($sql);
-$qtd = $res->num_rows;
+$res = $conexao->query($sql);
+$quantidade = $res->num_rows;
 $row = $res->fetch_object();
-?>
 
-<html>
+$sql = "SELECT * FROM usuarios";
+$resusuarios = $conexao->query($sql);
+$QTDusuarios = $resusuarios->num_rows;
+?>
 
 <head>
   <meta charset="utf-8" />
@@ -37,7 +39,7 @@ $row = $res->fetch_object();
 <body>
   <nav class="navbar navbar-dark bg-dark">
     <a class="navbar-brand" href="home.php">
-      <img src="../app_help_deskBD/imagens/editar01.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      <img src="../app_help_deskBD/imagens/editar_chamado.png" width="30" height="30" class="d-inline-block align-top" alt="">
       App Help Desk
     </a>
     <ul class="navbar-nav">
@@ -133,4 +135,3 @@ $row = $res->fetch_object();
 </body>
 
 </html>
-

@@ -30,7 +30,7 @@ $row = $res->fetch_object();
   <nav class="navbar navbar-dark bg-dark">
     <a class="navbar-brand" href="home.php">
       <img src="" alt="">
-      <img src="../app_help_desk_BD/imagens/editar01.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      <img src="../app_help_deskBD/imagens/editar01.png" width="30" height="30" class="d-inline-block align-top" alt="">
       App Help Desk
     </a>
   </nav>
@@ -72,7 +72,7 @@ $row = $res->fetch_object();
                       <option value="" disabled selected><?php print $row->perfil;?></option>
                       <option value="Usuário">Usuario</option>
                       <option value="Adm">Adm</option>
-                      <option value="Adm">Tec</option>
+                      <option value="Tecnico">Tecnico</option>
                     </select>
                   </div>
 
