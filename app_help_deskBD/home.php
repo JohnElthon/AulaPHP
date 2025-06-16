@@ -65,10 +65,10 @@ $row = $res->fetch_object();
                 </a>
               </div>
 
-              <?php if ($row->perfil != 'Adm' && $row->perfil != 'Tec') { ?>
+              <?php if ($row->perfil != 'Adm' && $row->perfil != 'Tecnico') { ?>
                 <div class="col-2 d-flex justify-content-center">
-                  <a href="editar_chamado.php">
-                    <img src="APP_HELP_DESKBD/imagens/editar01.png" width="70" height="70">
+                  <a href="#" style="filter: grayscale(100%); opacity: 0.5;">
+                    <img src="../app_help_deskbd/imagens/editar01.png" width="70" height="70">
                     <p>Editar</p>
                   </a>
                 </div>
@@ -94,7 +94,7 @@ $row = $res->fetch_object();
                 </a>
               </div>
 
-              <?php } else if ($row-> perfil == 'Tec') { ?>
+              <?php } else if ($row-> perfil == 'Tecnico') { ?>
                 <div class="col-2 d-flex justify-content-center">
                   <a href="editar_chamado.php">
                     <img src="../app_help_deskbd/imagens/editar-arquivo.png" width="70" height="70">

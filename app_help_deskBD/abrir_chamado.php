@@ -23,7 +23,7 @@ require_once "validador_acesso.php";
 
     <nav class="navbar navbar-dark bg-dark">
       <a class="navbar-brand" href="#">
-       <img src="../app_help_desk_bd/imagens/Abrir01.png" width="30" height="30">
+       <img src="../app_help_deskbd/imagens/Abrir01.png" width="30" height="30">
         App Help Desk
       </a>
     </nav>

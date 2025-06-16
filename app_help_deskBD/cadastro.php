@@ -1,7 +1,4 @@
-<?php
-require_once "validador_acesso.php";
-?>
- 
+
 <!DOCTYPE html>
 <html lang="pt-br">
  
@@ -65,9 +62,9 @@ require_once "validador_acesso.php";
                                     <label>Tipo de Usuário</label>
                                     <select name="perfil" class="form-control">
                                         <option selected disabled>Selecione</option>
-                                        <option>Administrador</option>
+                                        <option>Usuario</option>
                                         <option>Tecnico</option>
-                                        <option>Usuário</option>
+                                        <option>administrador</option>
                                     </select>
                                     <?php //VALIDA SE O USUÁRIO JÁ NÃO ESTAVA CADASTRADO
                                     if (isset($_GET['email']) && $_GET['email'] === 'erro') { ?>

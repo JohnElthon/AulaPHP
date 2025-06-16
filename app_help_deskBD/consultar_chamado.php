@@ -3,8 +3,8 @@
 require_once "validador_acesso.php";
 require "config.php";
 
-if ($_SESSION['perfil'] != 'Adm' && 'Tecnico'){
-  $sql = "SELECT * FROM chamados WHERE id_usuarios = {$_SESSION['id']}";
+if ($_SESSION['perfil'] != 'Adm' || 'Tecnico'){
+  $sql = "SELECT * FROM chamados WHERE id_usuario = {$_SESSION['id']}";
 }
 
 else {
@@ -12,11 +12,11 @@ else {
 }
 
 $res = $conexao->query($sql);
-$quantidade = $res->num_rows;
+$qtd = $res->num_rows;
 
 $sql = "SELECT * FROM usuarios";
 $resusuarios = $conexao->query($sql);
-$QTDusuarios = $resusuarios ->num_rows;
+$qtdusuarios = $resusuarios ->num_rows;
 ?>
 
 <html>
