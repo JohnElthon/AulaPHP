@@ -63,7 +63,7 @@ $qtdusuarios = $resusuarios ->num_rows;
                   <!-- Nos 3 itens abaixo aplicamos os valores respectivos em cada um deles -->
                   <h5 class="card-title" style="color: #17A2B8; margin-bottom: 6px;"><?php echo $row -> titulo ?></h5>
                   <h6 class="card-subtitle mb-2 text-dark " style="color:#000080 ; margin-bottom: 15px; font-weight: bold; font-size: 23px;" > Categoria: <?php echo $row -> categoria ?></h6>
-                  <p class="card-text">Descrição: <?php echo $row -> descricao ?></p>
+                  <p class="card-text text-dark font-weight-bold">Descrição: <?php echo $row -> descricao ?></p>
                   <h6 class="card-subtitle mb-2 text-muted" style="text-align: right;">
                 
                  <?php 
@@ -79,7 +79,7 @@ $qtdusuarios = $resusuarios ->num_rows;
                     ?>
                   </h6>
                
-               <h6 class="card-title" style="text-align: right;">Ordem de Serviço: <?php echo $row -> id_chamado ?></h6>
+               <h6 class="card-title text-dark font-weight-bold" style="text-align: right;">Ordem de Serviço: <?php echo $row -> id_chamado ?></h6>
                 </div>
               </div>
               <?php } ?>
