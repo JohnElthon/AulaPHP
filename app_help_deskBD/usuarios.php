@@ -57,21 +57,28 @@
 
 <?php
 
+// Aqui tá vendo se a URL tem um 'delete' e se o valor dele é 'sucesso'
+// Se for, aparece um alerta dizendo que o usuário foi excluído com sucesso
 if (isset($_GET['delete']) && $_GET['delete'] === 'sucesso') { ?>
     <script>alert('Usuário excluído com sucesso!');</script>
 <?php } ?>
 
 <?php
+// Agora aqui ele checa se tem algum erro vindo pela URL
 if (isset($_GET['erro'])) { 
+    // Se o erro for 'possui_chamados', mostra um alerta falando que o usuário não pode ser excluído porque tem chamados pendentes
     if ($_GET['erro'] === 'possui_chamados') { ?>
         <script>alert('Erro: Este usuário possui chamados e não pode ser excluído!');</script>
     
-   <?php } elseif ($_GET['erro'] === 'delete_falhou') { ?>
+   <?php 
+    // Se o erro for 'delete_falhou', mostra um alerta dizendo que deu erro ao tentar excluir o usuário
+    } elseif ($_GET['erro'] === 'delete_falhou') { ?>
         <script>alert('Erro ao tentar excluir o usuário.');</script>
     <?php } 
-   } 
+} 
 
 ?>
+
 
     <div class="container">
         <br>
