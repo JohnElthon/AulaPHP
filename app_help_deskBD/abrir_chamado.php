@@ -32,8 +32,8 @@ require_once "validador_acesso.php";
       <div class="row">
 
         <div class="card-abrir-chamado">
-          <div class="card">
-            <div class="card-header">
+          <div class="card bg-secondary text-white">
+            <div class="card-header bg-dark font-weight-bold">
               Abertura de chamado
                <?php if (isset($_GET['cadastro']) && $_GET['cadastro'] === 'efetuado') { ?>
               <div style="color: green;">
@@ -52,7 +52,7 @@ require_once "validador_acesso.php";
 
 
 
-            <div class="card-body">
+            <div class="card-body  font-weight-bold">
               <div class="row">
                 <div class="col">
                   

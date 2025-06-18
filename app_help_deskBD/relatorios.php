@@ -65,8 +65,8 @@ if ($res) {
     <div class="row">
 
       <div class="card-home">
-        <div class="card">
-          <div class="card-header">
+        <div class="card bg-light text-white">
+          <div class="card-header bg-dark font-weight-bold">
             Chamados
           </div>
 

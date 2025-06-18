@@ -45,21 +45,21 @@ $row = $res->fetch_object();
     <div class="row">
 
       <div class="card-home">
-        <div class="card">
-          <div class="card-header">
+        <div class="card bg-secondary text-white">
+          <div class="card-header bg-dark  font-weight-bold">
             Menu
           </div>
           <div class="card-body">
             <div class="row">
               <div class="col-2 d-flex justify-content-center">
-                <a href="abrir_chamado.php">
+                <a href="abrir_chamado.php" class="text-white">
                   <img src="../app_help_deskbd/imagens/abrir_chamado.png" width="70" height="70">
                   <p>Abrir</p>
                 </a>
 
               </div>
               <div class="col-2 d-flex justify-content-center">
-                <a href="consultar_chamado.php">
+                <a href="consultar_chamado.php" class="text-white">
                   <img src="../app_help_deskbd/imagens/consultar01.png" width="70" height="70">
                   <p>Consultar</p>
                 </a>
@@ -67,28 +67,28 @@ $row = $res->fetch_object();
 
               <?php if ($row->perfil != 'Adm' && $row->perfil != 'Tecnico') { ?>
                 <div class="col-2 d-flex justify-content-center">
-                  <a href="#" style="filter: grayscale(100%); opacity: 0.5;">
+                  <a  href="#" style="filter: grayscale(100%); opacity: 0.5;">
                     <img src="../app_help_deskbd/imagens/editar01.png" width="70" height="70">
                     <p>Editar</p>
                   </a>
                 </div>
 
                 <div class="col-2 d-flex justify-content-center">
-                <a href="#" style="filter: grayscale(100%); opacity: 0.5;">
+                <a href="#" class="text white" style="filter: grayscale(100%); opacity: 0.5;">
                   <img src="../app_help_deskbd/imagens/autorizar.png" width="70" height="70">
                   <p>Autorizar</p>
                 </a>
               </div>
 
               <div class="col-2 d-flex justify-content-center">
-                <a href="#" style="filter: grayscale(100%); opacity: 0.5;">
-                  <img src="../app_help_deskbd/imagens/Empresa01.png" width="70" height="70">
+                <a href="#" class="text white" style="filter: grayscale(100%); opacity: 0.5;">
+                  <img src="../app_help_deskbd/imagens/usuarios.png" width="70" height="70">
                   <p>Usuários</p>
                 </a>
               </div>
 
               <div class="col-2 d-flex justify-content-center">
-                <a href="#" style="filter: grayscale(100%); opacity: 0.5;">
+                <a href="#"class="text white" style="filter: grayscale(100%); opacity: 0.5;">
                   <img src="../app_help_deskbd/imagens/formularios.png" width="70" height="70">
                   <p>Relatórios</p>
                 </a>
@@ -96,28 +96,28 @@ $row = $res->fetch_object();
 
               <?php } else if ($row-> perfil == 'Tecnico') { ?>
                 <div class="col-2 d-flex justify-content-center">
-                  <a href="editar_chamado.php">
+                  <a href="editar_chamado.php" class="text-white">
                     <img src="../app_help_deskbd/imagens/editar-arquivo.png" width="70" height="70">
                     <p>Editar</p>
                   </a>
                 </div>
 
                 <div class="col-2 d-flex justify-content-center">
-                <a href="#" style="filter: grayscale(100%); opacity: 0.5;">
+                <a href="#" class="text white" style="filter: grayscale(100%); opacity: 0.5;">
                   <img src="../app_help_deskbd/imagens/autorizar.png" width="70" height="70">
                   <p>Autorizar</p>
                 </a>
               </div>
 
               <div class="col-2 d-flex justify-content-center">
-                <a href="#" style="filter: grayscale(100%); opacity: 0.5;">
+                <a href="#" class="text white" style="filter: grayscale(100%); opacity: 0.5;">
                   <img src="../app_help_deskbd/imagens/usuarios.png" width="70" height="70">
                   <p>Usuários</p>
                 </a>
               </div>
 
               <div class="col-2 d-flex justify-content-center">
-                <a href="#" style="filter: grayscale(100%); opacity: 0.5;">
+                <a href="#"class="text white" style="filter: grayscale(100%); opacity: 0.5;">
                   <img src="../app_help_deskbd/imagens/relatorio.png" width="70" height="70">
                   <p>Relatórios</p>
                 </a>
@@ -125,28 +125,28 @@ $row = $res->fetch_object();
 
                 <?php } else { ?>
                 <div class="col-2 d-flex justify-content-center">
-                  <a href="editar_chamado.php">
+                  <a href="editar_chamado.php" class="text-white">
                     <img src="../app_help_deskbd/imagens/editar01.png" width="70" height="70">
                     <p>Editar</p>
                   </a>
                 </div>
 
                 <div class="col-2 d-flex justify-content-center">
-                <a href="autorizar_usuarios.php">
+                <a href="autorizar_usuarios.php" class="text-white">
                   <img src="../app_help_deskbd/imagens/autorizar.png" width="70" height="70">
                   <p>Autorizar</p>
                 </a>
               </div>
 
               <div class="col-2 d-flex justify-content-center">
-                <a href="usuarios.php">
+                <a href="usuarios.php" class="text-white">
                   <img src="../app_help_deskbd/imagens/Usuarios01.png" width="70" height="70">
                   <p>Usuários</p>
                 </a>
               </div>
 
               <div class="col-2 d-flex justify-content-center">
-                <a href="relatorios.php">
+                <a href="relatorios.php" class="text-white">
                   <img src="../app_help_deskbd/imagens/formularios.png" width="70" height="70">
                   <p>Relatórios</p>
                 </a>
@@ -158,7 +158,7 @@ $row = $res->fetch_object();
         </div>
 
         <div class="card-home">
-          <div class="card">
+          <div class="card  bg-dark text-white font-weight-bold">
             <img src="imagens/Empresa02.png" alt="Banner" height="465px" >
             <h6 style="text-align: center;">App Help Desk</h6>
             <p style="text-align: center;">Assistência de qualidade para sua empresa!</p>

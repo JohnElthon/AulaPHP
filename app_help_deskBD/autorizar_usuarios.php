@@ -69,8 +69,8 @@
  
             if($qtd > 0){
                 print "<div class='table-responsive'>";
-                print "<table class='table table-hover table-bordered table-sm'>";
-                print "<thead class='thead-light'>"; // Cabeçalho branco com texto em negrito
+                print "<table class='table table-primary table-bordered table-sm''>";
+                print "<thead class='thead-dark'>"; // Cabeçalho branco com texto em negrito
                 print "<tr>";
                 print "<th scope='col'>ID</th>";
                 print "<th scope='col'>Usuário</th>";

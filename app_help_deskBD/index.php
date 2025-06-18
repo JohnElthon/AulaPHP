@@ -29,8 +29,8 @@
     <div class="row">
 
       <div class="card-login">
-        <div class="card">
-          <div class="card-header">
+        <div class="card bg-secondary text-white">
+          <div class="card-header bg-dark font-weight-bold">
             Login
           </div>
           <div class="card-body">
@@ -42,7 +42,7 @@
               <div class="form-group">
                 <input name="senha" type="password" class="form-control" placeholder="Senha">
                 <div class="text-primary" style="text-align: right;"> 
-                  <a href="cadastro.php">Novo? Cadastre-se!</a>
+                  <a href="cadastro.php" class="text-white">Novo? Cadastre-se!</a>
                 </div>
               </div>
 

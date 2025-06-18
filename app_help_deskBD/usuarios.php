@@ -54,15 +54,24 @@
     </ul>
   </nav>
 
-    <?php //VALIDA SE O USUÁRIO FOI DELETADO
-        if(isset($_GET['delete']) && $_GET['delete'] === 'sucesso') { ?>
-            <script> alert('Usuário excluído!');</script>
-        <?php } ?>
 
-        <?php //VALIDA SE O CHAMADO FOI EDITADO
-        if(isset($_GET['edicao']) && $_GET['edicao'] === 'sucesso') { ?>
-            <script> alert('Usuário Editado!');</script>
-        <?php } ?>
+<?php
+
+if (isset($_GET['delete']) && $_GET['delete'] === 'sucesso') { ?>
+    <script>alert('Usuário excluído com sucesso!');</script>
+<?php } ?>
+
+<?php
+if (isset($_GET['erro'])) { 
+    if ($_GET['erro'] === 'possui_chamados') { ?>
+        <script>alert('Erro: Este usuário possui chamados e não pode ser excluído!');</script>
+    
+   <?php } elseif ($_GET['erro'] === 'delete_falhou') { ?>
+        <script>alert('Erro ao tentar excluir o usuário.');</script>
+    <?php } 
+   } 
+
+?>
 
     <div class="container">
         <br>

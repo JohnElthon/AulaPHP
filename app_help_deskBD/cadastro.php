@@ -20,7 +20,7 @@
  
 <body>
  
-    <nav class="navbar navbar-dark bg-secondary">
+    <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="index.php">
             <img src="../app_help_deskBD/imagens/cadastro06.png" width="30" height="30" class="d-inline-block align-top" alt="">
             App Help Desk
@@ -40,11 +40,11 @@
         <div class="container mt-5">
             <div class="row justify-content-center">
                 <div class="col-md-6">
-                    <div class="card shadow">
-                        <div class="card-header bg-primary text-white text-center">
+                    <div class="card shadow text-white">
+                        <div class="card-header bg-dark text-center">
                             <h4>Cadastro de Usuário</h4>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body bg-secondary">
                             <form action="valida_cadastro.php" method="POST">
                                 <div class="form-group">
                                     <label>Nome Completo</label>
@@ -87,7 +87,7 @@
                                         </script>
                                     <?php } ?>
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
+                                <button type="submit" class="btn btn-info btn-block">Cadastrar</button>
                             </form>
                         </div>
                     </div>

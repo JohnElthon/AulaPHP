@@ -48,8 +48,8 @@ $qtdusuarios = $resusuarios ->num_rows;
       <div class="row">
 
         <div class="card-consultar-chamado">
-          <div class="card">
-            <div class="card-header font-weight-bold">
+          <div class="card bg-secondary text-white">
+            <div class="card-header  bg-dark font-weight-bold">
               Consulta de chamado
             </div>
             
